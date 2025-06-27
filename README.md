@@ -16,10 +16,10 @@ My core philosophy revolves around minimalism, speed, and a lightweight workflow
 ## What You'll Find Here 
 This repository is structured to provide a comprehensive overview of my technical journey:
 
-- [Home_server](my_devops_journey/Home_server/README.md): A detailed log of my home server setup, running on Arch Linux. Demonstrates practical experience in system administration, network configuration, and security hardening on a bare-metal Arch Linux server. It showcases my ability to build and maintain foundational infrastructure from the ground up. 
+- [Home_server](Home_server/README.md): A detailed log of my home server setup, running on Arch Linux. Demonstrates practical experience in system administration, network configuration, and security hardening on a bare-metal Arch Linux server. It showcases my ability to build and maintain foundational infrastructure from the ground up. 
 	- This includes initial system configurations, robust network setups (leveraging DHCP reservations for stable IP management), and essential security hardening.
-- [Programming-languages](my_devops_journey/Languages/README.md): My ongoing journey into programming, with a current focus on Shell Script, GO and Python. Here, you'll find learning exercises, scripts, and small projects that demonstrate my grasp of coding fundamentals and my ability to develop automation tools – a critical skill for any DevOps or SysAdmin role.
-- [Learning-notes](my_devops_journey/Learning%20journey/README.md): A collection of concise notes, summaries, and deeper dives into various technical concepts, tools, and best practices. These notes, synchronized from my Obsidian vault, cover topics in system administration, networking, software development, and core DevOps methodologies.
+- [Programming-languages](Languages/README.md): My ongoing journey into programming, with a current focus on Shell Script, GO and Python. Here, you'll find learning exercises, scripts, and small projects that demonstrate my grasp of coding fundamentals and my ability to develop automation tools – a critical skill for any DevOps or SysAdmin role.
+- [Learning-notes](/Learning%20journey/README.md): A collection of concise notes, summaries, and deeper dives into various technical concepts, tools, and best practices. These notes, synchronized from my Obsidian vault, cover topics in system administration, networking, software development, and core DevOps methodologies.
 -  [Development Environment](https://github.com/MiguelSchionato/my_dotfiles):  A look into my daily driver setup (Arch Linux + Hyprland), which reflects my passion for creating a fast, lightweight, and highly customized workflow optimized for productivity.
 
 #### My Goals & Professional Aspirations
