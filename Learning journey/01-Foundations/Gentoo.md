@@ -112,3 +112,8 @@ C_MESSAGES=C.utf8
 This project was a success, meeting its primary goal as an intensive learning experience. The resulting system is not merely an "installation," but a system that was built, broken, understood, and repaired. The knowledge gained from debugging each unexpected issue is the most valuable outcome.
 
 The journey does not end here. This stable, custom-built foundation is now ready for its intended purpose: **to serve as a platform for continuous learning, experimentation, and ongoing upgrades.**
+
+
+---
+Obsidian links - just ignore it
+ [[Linux]]  [[portage]] [[Linux-Gentoo]] [[USE flags]] [[make.conf]]

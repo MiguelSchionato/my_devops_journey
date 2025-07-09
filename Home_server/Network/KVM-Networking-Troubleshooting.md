@@ -68,7 +68,7 @@ The ultimate solution involved a multi-pronged approach to overcome persistent n
 
 While each step presented its own challenges, the combination of these solutions allowed for a successful Debian VM installation and access.
 
- >After all that struggle. I decide to install a dual-boot  on my main desktop to trouble-shoot and get rid of my Hyperland-Nvidia setup that can, sometimes, be problematic. You can check all [here](../01-Foundations/Linux-%20Debian.md) 
+ >After all that struggle. I decide to install a dual-boot  on my main desktop to trouble-shoot and get rid of my Hyperland-Nvidia setup that can, sometimes, be problematic. You can check all [here](Linux-%20Debian.md) 
  
 
 ---
@@ -106,3 +106,8 @@ List concepts you already knew but now understand more deeply or have seen in a 
 -   **Importance of Logs:** Reaffirmed the value of checking system and application logs (e.g., `libvirtd` logs) for diagnosing underlying issues.
 -   **Hardware/Software Compatibility:** Experienced firsthand how hardware (e.g., Ethernet card) and software (e.g., kernel version, graphical environment) compatibility can impact virtualization setups.
 -   **Persistence and Iteration:** The process highlighted the need for persistence and iterative problem-solving when facing complex technical challenges.
+
+
+---
+Obsidian links - just ignore it
+[[Network bridge]] [[ip]] [[KVM]] [[VNC]] [[Home-server]]
