@@ -7,10 +7,11 @@ My core philosophy revolves around minimalism, speed, and a lightweight workflow
 
 ---
 #### Core Technologies
-**OS & Administration:** Arch Linux, Security Hardening, Networking (DHCP, DNS), Bash  
-**Programming & Automation:** Python, Go, Shell Script, Git  
+**OS & Administration:** Linux, Security Hardening, Networking (DHCP, DNS), Bash  
+**Programming Languages:** GO, Python, Lua, C/C++
+**Automation:** Python, Go, Bash/Shell Script, Git  
 **Currently Developing:** Docker, Ansible, CI/CD Principles, Monitoring  
-**Daily Environment:** Hyprland, Neovim, 
+
 
 ---
 ## What You'll Find Here 
@@ -27,7 +28,7 @@ This repository is structured to provide a comprehensive overview of my technica
 I am actively pursuing a career as a **DevOps Engineer junior** or **System Administrator junior**. My goal is to contribute to teams that value automation, continuous delivery, and robust infrastructure management. I am keen on applying my growing skills in:
 
 - Linux System Administration: Deep understanding of Linux environments, troubleshooting, and optimization.
-- Automation & Scripting:  Developing proficiency in scripting languages (especially Python and bash) for automating tasks and building custom tools.
+- Automation & Scripting:  Developing proficiency in scripting languages (especially GO and bash) for automating tasks and building custom tools.
 - Containerization: Developing proficiency in containerization with Docker to create consistent and isolated application environments
 - Infrastructure as Code (IaC): Actively learning IaC principles with Ansible to provision and manage infrastructure declaratively. 
 - Monitoring & Observability: Exploring monitoring stacks (e.g., Prometheus/Grafana) to ensure application and infrastructure health. 
