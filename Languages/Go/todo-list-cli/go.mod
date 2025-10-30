@@ -1,3 +1,3 @@
-module exemple/todo
+module todo
 
 go 1.25.3
