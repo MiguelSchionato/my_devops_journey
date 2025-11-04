@@ -11,9 +11,17 @@ I began my programming journey with **Python**, which provided a solid foundatio
 *   **Lua:** For its lightweight and embeddable nature, making it ideal for scripting in larger applications.
 *   **Bash:** As an essential tool for shell scripting and automating tasks in a Linux environment.
 
+#### Intended languages
+*   **Rust:** For its memory safe low-level capabilities.
+*   **Zig/Nim:** For their modern approach to systems programming.
+
 I am continuously developing my skills in these languages, with a particular interest in those that are low-level, high-efficiency, and fast. My language choices are driven by two main passions: the need to **automate** (with Bash, Go, and Lua) and the desire to **create** reliable and performant software (with C/C++, and in the future, Rust).
 
-## A Note on AI
+## Note on tutorials
+
+When a project is based on a tutorial, I will make it clear in the directory's title. However, I will always adapt the code to my own coding style and will never blindly copy anyone's code.
+
+## A Note on *AI*
 
 I want to be transparent about my use of AI in this repository.
 
