@@ -1,22 +1,22 @@
 package main
 
 import (
-	"os"
+	"todo/commands"
 	"errors"
 	"fmt"
-	"todo/commands"
+	"os"
 )
 
-func main()  {
+func main() {
 	err := checkArgs()
-	if err != nil{
+	if err != nil {
 		return
 	}
 	command := os.Args[1]
 	switch command {
 	case "add":
 		commands.Add()
-	default: 
+	default:
 		fmt.Println("default option")
 	}
 }
@@ -24,9 +24,7 @@ func main()  {
 func checkArgs() error {
 	if len(os.Args) <= 2 {
 		fmt.Println("Use: <Command> <Task>")
-		return errors.New("Not enought arguments")
+		return errors.New("Not enough arguments")
 	}
 	return nil
 }
-
-
