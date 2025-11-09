@@ -1,3 +1,6 @@
 Languages/C/.*
 Languages/Go/todo/.idea/
 Languages/Go/todo/qodana.yaml
+Languages/Go/qodana.yaml
+Languages/Go/.idea/
+Languages/.idea/
