@@ -5,5 +5,6 @@ Languages/Go/qodana.yaml
 Languages/Go/.idea/
 Languages/Go/pkg/
 Languages/Go/pkg/mod
+Languages/Go/bin/
 Languages/.idea/
 **/*.env

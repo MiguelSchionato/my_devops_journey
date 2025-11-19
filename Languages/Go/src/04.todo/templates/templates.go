@@ -5,23 +5,22 @@ import (
 	//"fmt"
 )
 
-
 type Task struct {
-	Name string
-	ID int
+	Name  string
+	ID    int
 	Descr string
-	Date time.Time
-	Due time.Time
+	Date  time.Time
+	Due   time.Time
 	State int
 	/*
-	isComplete bool
-	hasStarted bool
+		isComplete bool
+		hasStarted bool
 	*/
 
 }
 
 type Lists struct {
-	Name string
+	Name  string
 	Descr string
-	Tasks []Task // or should I use map ?? 
+	Tasks []Task
 }

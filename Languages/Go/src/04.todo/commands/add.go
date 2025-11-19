@@ -2,17 +2,41 @@ package commands
 
 import (
 	"fmt"
-	"os"
+	"time"
+	"todo/logic"
+	"todo/templates"
 )
 
-func Add() {
-	fmt.Println("simple file was made")
-	add, err := os.OpenFile("test.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+func Add(taskName string, File string) {
+	var allLists []templates.Lists
+	newTask := templates.Task{
+		Name: taskName,
+		Date: time.Now(),
+	}
+
+	allLists, err := logic.Unmarshing(File)
 	if err != nil {
-		fmt.Printf("Couldn't create file:", err)
 		return
 	}
 
-	add.Write([]byte(os.Args[2]))
+	listIndex := logic.FindList("default", allLists)
+
+	if listIndex != -1 {
+		allLists[listIndex].Tasks = append(allLists[listIndex].Tasks, newTask)
+	} else {
+		newDefaultList := templates.Lists{
+			Name:  "default",
+			Descr: "Default list",
+			Tasks: []templates.Task{newTask},
+		}
+
+		allLists = append(allLists, newDefaultList)
+		fmt.Printf("List not found, appending to the default list") // debug
+	}
+
+	err = logic.Marshing(allLists, File)
+	if err != nil {
+		return
+	}
 
 }

@@ -3,12 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
-	// "os"
 )
-
-// func main() {
-//
-// }
 
 func main() {
 	site := "https://tech.miguelschionato.com"
