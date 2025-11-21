@@ -24,3 +24,7 @@ type Lists struct {
 	Descr string
 	Tasks []Task
 }
+
+type Config struct {
+	CurrentList string `json:"CurrentList"`
+}

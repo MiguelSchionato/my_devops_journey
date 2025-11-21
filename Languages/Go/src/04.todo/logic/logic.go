@@ -20,18 +20,17 @@ func Unmarshing(File string) ([]templates.Lists, error) {
 		allLists := []templates.Lists{} // using a default empty list
 		return allLists, nil
 	}
-	err = json.Unmarshal(data, &allLists) //Unmarshaling json
+	err = json.Unmarshal(data, &allLists) //Unmarshing json
 	if err != nil {
 		fmt.Printf("Couldn't read file: %v\n", err)
 		return nil, err
 	}
 
-	fmt.Println("Listas carregadas (ou inicializadas) com sucesso.") // debug
+	// fmt.Println("Listas carregadas (ou inicializadas) com sucesso.") // debug
 	return allLists, err
 }
 
 func Marshing(Lists []templates.Lists, File string) error {
-	var data []byte
 	data, err := json.Marshal(Lists)
 	if err != nil {
 		fmt.Printf("Fail writting file: %v\n", err)
@@ -72,7 +71,7 @@ func FindTask(listIndex int, taskName string, allLists []templates.Lists) int {
 func CheckArgs(id int) error {
 	if len(os.Args) <= id {
 		fmt.Println("Use: <Command> <Task>")
-		return errors.New("Not enough arguments")
+		return errors.New("not enough arguments")
 	}
 	return nil
 }

@@ -23,7 +23,7 @@ func Ls(listName, File string) error {
 	listIndex := logic.FindList(listName, allLists)
 	if listIndex == -1 {
 		fmt.Println("List not found")
-		return errors.New("List not found")
+		return errors.New("list not found")
 	}
 
 	for _, task := range allLists[listIndex].Tasks {
