@@ -7,7 +7,7 @@ import (
 	"todo/templates"
 )
 
-func Add(taskName string, File string) {
+func Add(taskName, listName, File string) {
 	var allLists []templates.Lists
 	newTask := templates.Task{
 		Name: taskName,
@@ -19,19 +19,19 @@ func Add(taskName string, File string) {
 		return
 	}
 
-	listIndex := logic.FindList("default", allLists)
+	listIndex := logic.FindList(listName, allLists)
 
 	if listIndex != -1 {
 		allLists[listIndex].Tasks = append(allLists[listIndex].Tasks, newTask)
 	} else {
 		newDefaultList := templates.Lists{
-			Name:  "default",
+			Name:  listName,
 			Descr: "Default list",
 			Tasks: []templates.Task{newTask},
 		}
 
 		allLists = append(allLists, newDefaultList)
-		fmt.Printf("List not found, appending to the default list") // debug
+		fmt.Printf("List not found, appending to the new list") // debug
 	}
 
 	err = logic.Marshing(allLists, File)

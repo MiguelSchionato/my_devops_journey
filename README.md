@@ -40,5 +40,5 @@ I am **open to remote job opportunities** that allow me to grow my expertise, co
 Feel free to explore my work and learning journey. If you're a recruiter, a fellow enthusiast, or just want to connect, I'd love to hear from you.
 Let's build something great together!
 
-* **[🔗 Connect with me on LinkedIn](https://www.linkedin.com/in/miguel-schionato-3a0457263/)** 
+* **[🔗 Connect with me on LinkedIn](https://www.linkedin.com/in/miguel-schionato)** 
 * **[✉️ Send me an Email](mailto:migueloliveira642@hotmail.com)**

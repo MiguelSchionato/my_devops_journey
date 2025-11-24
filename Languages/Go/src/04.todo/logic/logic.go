@@ -5,6 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"os"
+	"strconv"
 	"todo/templates"
 )
 
@@ -56,11 +57,15 @@ func FindList(listName string, allLists []templates.Lists) int {
 	return listIndex
 }
 
-func FindTask(listIndex int, taskName string, allLists []templates.Lists) int {
+func FindTask(listIndex int, taskID string, allLists []templates.Lists) int {
 	taskIndex := -1
+	taskIdInt, err := strconv.Atoi(taskID)
+	if err != nil {
+		return -1
+	}
 
 	for i, task := range allLists[listIndex].Tasks {
-		if task.Name == taskName {
+		if task.ID == taskIdInt {
 			taskIndex = i
 			break
 		}

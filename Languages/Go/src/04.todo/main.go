@@ -14,11 +14,14 @@ func main() {
 		return
 	}
 	command := os.Args[1]
-	File, err := configs.CurrentList()
+
+	config, err := configs.CurrentConfig()
 	if err != nil {
 		fmt.Printf("Unable to read list file: %v", err)
 		return
 	}
+	File := config.CurrentListPath
+	List := config.CurrentList
 
 	switch command {
 	case "add":
@@ -26,66 +29,77 @@ func main() {
 		if err != nil {
 			return
 		}
-		commands.Add(os.Args[2], File)
+		commands.Add(os.Args[2], List, File)
 
 	case "ls", "list":
 		if len(os.Args) > 2 {
-			err := commands.Ls(os.Args[2], File)
+			err := commands.ListTask(os.Args[2], List, File)
 			if err != nil {
 				return
 			}
 		} else {
-			err := commands.Ls("default", File)
+			err := commands.ListTaskName(List, File)
 			if err != nil {
 				return
 			}
 		}
 	case "rm", "remove":
-		if len(os.Args) >= 2 {
-			err := commands.RemoveTask(os.Args[2], "default", File)
+		if len(os.Args) == 3 {
+			err := commands.RemoveTask(os.Args[2], List, File)
 			if err != nil {
 				return
 			}
-		} else {
+		} else if len(os.Args) == 4 {
 			err := commands.RemoveTask(os.Args[2], os.Args[3], File)
 			if err != nil {
 				return
 			}
+		} else {
+			fmt.Println("Usage: todo rm <task> [list]")
 		}
 	case "done":
-		if len(os.Args) >= 2 {
-			err := commands.Done(os.Args[2], "default", File)
+		if len(os.Args) == 3 {
+			err := commands.Done(os.Args[2], List, File)
 			if err != nil {
 				return
 			}
-		} else {
+		} else if len(os.Args) == 4 {
 			err := commands.Done(os.Args[2], os.Args[3], File)
 			if err != nil {
 				return
 			}
+		} else {
+			fmt.Println("Usage: todo done <task> [list]")
 		}
 	case "append":
-		if len(os.Args) >= 2 {
+		if len(os.Args) == 4 {
 			err := commands.AppendList(os.Args[2], os.Args[3])
 			if err != nil {
 				return
 			}
 		} else {
-			fmt.Println("Usage: todo <listToAppend> <DataBase>")
+			fmt.Println("Usage: todo append <listToAppend> <DataBase>")
 		}
 
 	case "change":
-		if len(os.Args) > 2 {
-			err := commands.ChangeList(os.Args[2])
-			if err != nil {
-				return
-			}
-		} else {
-			fmt.Println("Usage: todo <NewDefaultList>")
+		if len(os.Args) < 4 {
+			fmt.Println("Usage: todo change <file/list> <newFile/list>")
 			return
 		}
 
-	default:
-		fmt.Println("default option")
+		switch os.Args[2] {
+		case "file":
+			err := commands.ChangeListFile(os.Args[3])
+			if err != nil {
+				return
+			}
+
+		case "list":
+			err := commands.ChangeList(os.Args[3])
+			if err != nil {
+				return
+			}
+			return
+		}
 	}
 }

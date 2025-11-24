@@ -2,9 +2,9 @@ package configs
 
 import (
 	"encoding/json"
-	"errors"
 	"fmt"
 	"os"
+	"path/filepath"
 	"todo/templates"
 )
 
@@ -12,33 +12,42 @@ const File = "config.json"
 
 var defaultConfig templates.Config
 
-func CurrentList() (string, error) {
+func CurrentConfig() (templates.Config, error) {
 	config, err := UnmarshingConfigs()
-	if os.IsNotExist(err) || err != nil { // best err case, os.IsNotExist.
-		config := templates.Config{CurrentList: "default.json"} // using a default list
-		defaultList := config.CurrentList
-		return defaultList, nil
+	if err != nil {
+		if os.IsNotExist(err) {
+			defaultConfigFilePath, err := GetConfigPath("default.json")
+			if err != nil {
+				return templates.Config{}, err
+			}
+			config = templates.Config{CurrentList: "default", CurrentListPath: defaultConfigFilePath}
+			err = MarshingConfigs(config)
+			if err != nil {
+				return templates.Config{}, err
+			}
+			return config, nil
+		}
+		return templates.Config{}, err
 	}
-
-	return config.CurrentList, nil
+	return config, nil
 }
 
 func UnmarshingConfigs() (templates.Config, error) {
-	bytes, err := os.ReadFile(File)
-	if os.IsNotExist(err) {
-		config := templates.Config{CurrentList: "default.json"} // using a default list
-		return config, nil
-	} else if err != nil {
-		return defaultConfig, err
-	}
-
-	err = json.Unmarshal(bytes, &defaultConfig)
+	var config templates.Config
+	path, err := GetConfigPath(File)
 	if err != nil {
-		err = errors.New("error on reading config file, using default list")
-		return defaultConfig, err
+		return config, err
+	}
+	bytes, err := os.ReadFile(path)
+	if err != nil {
+		return config, err // os.IsNotExist will be handled by CurrentConfig
 	}
 
-	return defaultConfig, nil
+	err = json.Unmarshal(bytes, &config)
+	if err != nil {
+		return config, fmt.Errorf("error on reading config file: %v", err)
+	}
+	return config, nil
 }
 
 func MarshingConfigs(newDefaultList templates.Config) error {
@@ -48,11 +57,34 @@ func MarshingConfigs(newDefaultList templates.Config) error {
 		return err
 	}
 
-	err = os.WriteFile(File, data, 0640)
+	path, err := GetConfigPath(File)
+	if err != nil {
+		return err
+	}
+
+	err = os.WriteFile(path, data, 0640)
 	if err != nil {
 		fmt.Printf("Fail writting file: %v\n", err)
 		return err
 	}
 
 	return nil
+}
+
+func GetConfigPath(fileName string) (string, error) {
+	home, err := os.UserHomeDir()
+	if err != nil {
+		return "", fmt.Errorf("home folder not found %v", err)
+	}
+
+	configPath := filepath.Join(home, ".config", "todo")
+
+	err = os.MkdirAll(configPath, 0755)
+	if err != nil {
+		return "", fmt.Errorf("error creating parent folder %v", err)
+	}
+
+	fullPath := filepath.Join(configPath, fileName)
+	return fullPath, nil
+
 }

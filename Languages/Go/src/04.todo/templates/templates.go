@@ -26,5 +26,6 @@ type Lists struct {
 }
 
 type Config struct {
-	CurrentList string `json:"CurrentList"`
+	CurrentListPath string `json:"CurrentListPath"`
+	CurrentList     string `json:"CurrentList"`
 }

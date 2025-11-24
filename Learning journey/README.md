@@ -37,7 +37,6 @@ Please feel free to open an **Issue** in the main repository if you find an erro
 
 ### About Me
 
-My name is Miguel Schionato, a tech enthusiast passionate about automation, minimalism, the cloud, and the DevOps and Linux culture.
+My name is Miguel Schionato, a tech enthusiast passionate about automation, minimalism, the cloud, and the DevOps and Linux culture, of course.
 
-* **[🔗 LinkedIn](https://www.linkedin.com/in/your-username-here)**
-* **[🌐 Website/Blog](link-to-your-website-here)**
+* **[🔗 LinkedIn](https://www.linkedin.com/in/miguel-schionato)**
