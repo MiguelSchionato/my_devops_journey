@@ -1,0 +1,412 @@
+[
+  {
+    "Name": "Semana 1",
+    "Descr": "Semana focada em base sólida de backend, Linux e Docker. 6-7 horas por dia, total 30-36 horas.",
+    "Tasks": [
+      {
+        "Name": "Criar estrutura inicial do projeto Go (cmd/, internal/)",
+        "ID": 0,
+        "Descr": "Organizar projeto em layout profissional. (1 hora)",
+        "Date": "2025-11-20T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Implementar handler GET /ping",
+        "ID": 1,
+        "Descr": "Retornar JSON com { 'msg': 'pong', timestamp }. (1 hora)",
+        "Date": "2025-11-20T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Testar rota /ping com curl e reforçar HTTP básico",
+        "ID": 2,
+        "Descr": "Aprender a validar headers e body. (30 min)",
+        "Date": "2025-11-20T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Criar handler POST /items com validação de JSON",
+        "ID": 3,
+        "Descr": "Criar struct Item, receber body, validar, retornar status. (2 horas)",
+        "Date": "2025-11-20T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Criar resposta padrão JSON (erro, ok, mensagem)",
+        "ID": 4,
+        "Descr": "Implementar função utilitária para resposta uniforme. (30 min)",
+        "Date": "2025-11-20T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Criar middleware de logging HTTP",
+        "ID": 5,
+        "Descr": "Log de método, rota, duração e status code. (1h30)",
+        "Date": "2025-11-21T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Criar middleware de validação de header Authorization",
+        "ID": 6,
+        "Descr": "Implementar regra simples: header obrigatório. (1 hora)",
+        "Date": "2025-11-21T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Integrar middlewares com rotas existentes",
+        "ID": 7,
+        "Descr": "Aplicar middlewares de forma ordenada no router. (30 min)",
+        "Date": "2025-11-21T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Refatorar código em funções menores e mais limpas",
+        "ID": 8,
+        "Descr": "Melhorar design do pacote handlers e utils. (1 hora)",
+        "Date": "2025-11-21T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Configurar repositório Git com branch main + develop",
+        "ID": 9,
+        "Descr": "Trabalhar em branch feature/api e integrar. (1 hora)",
+        "Date": "2025-11-22T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Criar commits limpos e mensagens padronizadas",
+        "ID": 10,
+        "Descr": "Usar formato tipo Conventional Commits. (30 min)",
+        "Date": "2025-11-22T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Praticar merge e resolução de conflitos básicos",
+        "ID": 11,
+        "Descr": "Simular conflito em arquivo simples e resolver. (1 hora)",
+        "Date": "2025-11-22T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Praticar comandos avançados: grep, awk, sed",
+        "ID": 12,
+        "Descr": "Manipular arquivos reais e logs. (1h30)",
+        "Date": "2025-11-23T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Criar novo usuário e grupo + permissões diferentes",
+        "ID": 13,
+        "Descr": "Trabalhar com chmod, chown, ACLs. (1 hora)",
+        "Date": "2025-11-23T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Investigar logs do sistema com journalctl",
+        "ID": 14,
+        "Descr": "Aprender filtros básicos e avançados. (45 min)",
+        "Date": "2025-11-23T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Monitorar processos com top, htop e ps",
+        "ID": 15,
+        "Descr": "Comparar consumo de RAM e CPU. (45 min)",
+        "Date": "2025-11-23T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Criar Dockerfile do zero (multi-stage build)",
+        "ID": 16,
+        "Descr": "Criar imagem leve e otimizada. (1h30)",
+        "Date": "2025-11-24T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Criar .dockerignore eficiente",
+        "ID": 17,
+        "Descr": "Evitar enviar arquivos desnecessários para o build. (30 min)",
+        "Date": "2025-11-24T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Buildar imagem e rodar container testando rotas",
+        "ID": 18,
+        "Descr": "Garantir que API está estável dentro do container. (1 hora)",
+        "Date": "2025-11-24T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": " Criar healthcheck simples no Docker",
+        "ID": 19,
+        "Descr": "Usar curl dentro do container para validar status. (45 min)",
+        "Date": "2025-11-24T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Revisar e refatorar handlers e middlewares",
+        "ID": 20,
+        "Descr": "Remover duplicação e melhorar funções. (1h30)",
+        "Date": "2025-11-25T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Documentar API mínima no README",
+        "ID": 21,
+        "Descr": "Adicionar rotas, comandos curl e explicações. (1 hora)",
+        "Date": "2025-11-25T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Testar API + Docker de ponta a ponta",
+        "ID": 22,
+        "Descr": "Testar todos endpoints dentro e fora do container. (1h30)",
+        "Date": "2025-11-26T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Criar log de performance básico",
+        "ID": 23,
+        "Descr": "Testar resposta de rotas sob carga leve. (1 hora)",
+        "Date": "2025-11-26T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      }
+    ]
+  },
+  {
+    "Name": "Semana 1",
+    "Descr": "Semana focada em base sólida de backend, Linux e Docker. 6-7 horas por dia, total 30-36 horas.",
+    "Tasks": [
+      {
+        "Name": "Criar estrutura inicial do projeto Go (cmd/, internal/)",
+        "ID": 0,
+        "Descr": "Organizar projeto em layout profissional. (1 hora)",
+        "Date": "2025-11-20T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Implementar handler GET /ping",
+        "ID": 1,
+        "Descr": "Retornar JSON com { 'msg': 'pong', timestamp }. (1 hora)",
+        "Date": "2025-11-20T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Testar rota /ping com curl e reforçar HTTP básico",
+        "ID": 2,
+        "Descr": "Aprender a validar headers e body. (30 min)",
+        "Date": "2025-11-20T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Criar handler POST /items com validação de JSON",
+        "ID": 3,
+        "Descr": "Criar struct Item, receber body, validar, retornar status. (2 horas)",
+        "Date": "2025-11-20T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Criar resposta padrão JSON (erro, ok, mensagem)",
+        "ID": 4,
+        "Descr": "Implementar função utilitária para resposta uniforme. (30 min)",
+        "Date": "2025-11-20T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Criar middleware de logging HTTP",
+        "ID": 5,
+        "Descr": "Log de método, rota, duração e status code. (1h30)",
+        "Date": "2025-11-21T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Criar middleware de validação de header Authorization",
+        "ID": 6,
+        "Descr": "Implementar regra simples: header obrigatório. (1 hora)",
+        "Date": "2025-11-21T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Integrar middlewares com rotas existentes",
+        "ID": 7,
+        "Descr": "Aplicar middlewares de forma ordenada no router. (30 min)",
+        "Date": "2025-11-21T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Refatorar código em funções menores e mais limpas",
+        "ID": 8,
+        "Descr": "Melhorar design do pacote handlers e utils. (1 hora)",
+        "Date": "2025-11-21T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Configurar repositório Git com branch main + develop",
+        "ID": 9,
+        "Descr": "Trabalhar em branch feature/api e integrar. (1 hora)",
+        "Date": "2025-11-22T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Criar commits limpos e mensagens padronizadas",
+        "ID": 10,
+        "Descr": "Usar formato tipo Conventional Commits. (30 min)",
+        "Date": "2025-11-22T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Praticar merge e resolução de conflitos básicos",
+        "ID": 11,
+        "Descr": "Simular conflito em arquivo simples e resolver. (1 hora)",
+        "Date": "2025-11-22T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Praticar comandos avançados: grep, awk, sed",
+        "ID": 12,
+        "Descr": "Manipular arquivos reais e logs. (1h30)",
+        "Date": "2025-11-23T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Criar novo usuário e grupo + permissões diferentes",
+        "ID": 13,
+        "Descr": "Trabalhar com chmod, chown, ACLs. (1 hora)",
+        "Date": "2025-11-23T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Investigar logs do sistema com journalctl",
+        "ID": 14,
+        "Descr": "Aprender filtros básicos e avançados. (45 min)",
+        "Date": "2025-11-23T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Monitorar processos com top, htop e ps",
+        "ID": 15,
+        "Descr": "Comparar consumo de RAM e CPU. (45 min)",
+        "Date": "2025-11-23T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Criar Dockerfile do zero (multi-stage build)",
+        "ID": 16,
+        "Descr": "Criar imagem leve e otimizada. (1h30)",
+        "Date": "2025-11-24T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Criar .dockerignore eficiente",
+        "ID": 17,
+        "Descr": "Evitar enviar arquivos desnecessários para o build. (30 min)",
+        "Date": "2025-11-24T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Buildar imagem e rodar container testando rotas",
+        "ID": 18,
+        "Descr": "Garantir que API está estável dentro do container. (1 hora)",
+        "Date": "2025-11-24T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": " Criar healthcheck simples no Docker",
+        "ID": 19,
+        "Descr": "Usar curl dentro do container para validar status. (45 min)",
+        "Date": "2025-11-24T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Revisar e refatorar handlers e middlewares",
+        "ID": 20,
+        "Descr": "Remover duplicação e melhorar funções. (1h30)",
+        "Date": "2025-11-25T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Documentar API mínima no README",
+        "ID": 21,
+        "Descr": "Adicionar rotas, comandos curl e explicações. (1 hora)",
+        "Date": "2025-11-25T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Testar API + Docker de ponta a ponta",
+        "ID": 22,
+        "Descr": "Testar todos endpoints dentro e fora do container. (1h30)",
+        "Date": "2025-11-26T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      },
+      {
+        "Name": "Criar log de performance básico",
+        "ID": 23,
+        "Descr": "Testar resposta de rotas sob carga leve. (1 hora)",
+        "Date": "2025-11-26T00:00:00Z",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      }
+    ]
+  },
+  {
+    "Name": "default",
+    "Descr": "Default list",
+    "Tasks": [
+      {
+        "Name": " asdib",
+        "ID": 0,
+        "Descr": "",
+        "Date": "2025-11-21T01:05:57.016896+01:00",
+        "Due": "0001-01-01T00:00:00Z",
+        "State": 0
+      }
+    ]
+  }
+]

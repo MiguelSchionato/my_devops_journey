@@ -9,3 +9,4 @@ Languages/Go/src/04.todo/week*
 Languages/Go/bin/
 Languages/.idea/
 **/*.env
+**/vendor/**
